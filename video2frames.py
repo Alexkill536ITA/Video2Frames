@@ -20,7 +20,7 @@ def main(args):
         print "Remove existing output folder"
         shutil.rmtree(args.output)
 
-    os.mkdir(args.output)
+    os.makedirs(args.output)
 
     cap = cv2.VideoCapture()
     cap.open(args.input)

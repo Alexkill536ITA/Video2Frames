@@ -40,6 +40,9 @@ def main(args):
 
     frameId = 0
     rotateAngle = args.rotate if args.rotate else 0
+    if rotateAngle > 0:
+        print "Rotate output frames on {deg} clock-wise".format(deg=rotateAngle)
+
     while frameId < frameCount:
         ret, frame = cap.read()
         # print frameId, ret, frame.shape
@@ -49,12 +52,12 @@ def main(args):
 
         # Rotate if needed:
         if rotateAngle > 0:
-            if rotateAngle is 90:
+            if rotateAngle == 90:
                 frame = cv2.transpose(frame)
                 frame = cv2.flip(frame, 1)
-            elif rotateAngle is 180:
+            elif rotateAngle == 180:
                 frame = cv2.flip(frame, -1)
-            elif rotateAngle is 270:
+            elif rotateAngle == 270:
                 frame = cv2.transpose(frame)
                 frame = cv2.flip(frame, 0)
 

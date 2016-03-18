@@ -10,7 +10,6 @@ import cv2
 
 
 def main(args):
-    print args
 
     if not os.path.exists(args.input):
         parser.error("Input video file is not found")

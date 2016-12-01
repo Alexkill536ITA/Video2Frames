@@ -9,7 +9,9 @@ python video2frames.py input/video/file/path output/folder [--maxframes] [--rota
 ```
 
 Options : 
+
 	--maxframes : Max number of output frames (or files)
+
 	--rotate : Rotate clock-wise output frames, possible values = {90, 180, 270}
 
 ### Example : 
